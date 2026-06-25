@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "tanzanitemod:raw_tanzanite_block"
+  },
+  "result": "tanzanitemod:tanzanite_block",
+  "experience": 6910,
+  "cookingtime": 108000
+}

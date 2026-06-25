@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ttt",
+    "ttt",
+    "ttt"
+  ],
+  "key": {
+    "t": {
+      "item": "tanzanitemod:tanzanite"
+    }
+  },
+  "result": {
+    "item": "tanzanitemod:tanzanite_block",
+    "count": 1
+  }
+}

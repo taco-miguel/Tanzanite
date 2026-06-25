@@ -1,0 +1,9 @@
+{
+  "item.tanzanitemod.tanzanite" : "Tanzanite Crystal",
+  "item.tanzanitemod.raw_tanzanite" : "Raw Tanzanite",
+  "creativetab.tanzanitemod.tanzanite_tab": "Tanzanite Mod",
+  "block.tanzanitemod.tanzanite_block" : "Block of Tanzanite",
+  "block.tanzanitemod.raw_tanzanite_block" : "Block of Raw Tanzanite",
+  "block.tanzanitemod.tanzanite_ore" : "Tanzanite Ore",
+  "block.tanzanitemod.deepslate_tanzanite_ore" : "Deesplate Tanzanite Ore"
+}

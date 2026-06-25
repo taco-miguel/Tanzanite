@@ -1,6 +1,11 @@
 package dev.migueltaco.tanzanitemod;
 
 import com.mojang.logging.LogUtils;
+import dev.migueltaco.tanzanitemod.block.ModBlocks;
+import dev.migueltaco.tanzanitemod.effect.ModEffects;
+import dev.migueltaco.tanzanitemod.item.ModCreativeModeTabs;
+import dev.migueltaco.tanzanitemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,6 +30,11 @@ public class TanzaniteMod
     public TanzaniteMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModEffects.MOB_EFFECTS.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -38,7 +48,10 @@ public class TanzaniteMod
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.TANZANITE);
+            event.accept(ModItems.RAW_TANZANITE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
