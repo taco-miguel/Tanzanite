@@ -5,6 +5,8 @@ import dev.migueltaco.tanzanitemod.block.ModBlocks;
 import dev.migueltaco.tanzanitemod.effect.ModEffects;
 import dev.migueltaco.tanzanitemod.item.ModCreativeModeTabs;
 import dev.migueltaco.tanzanitemod.item.ModItems;
+import dev.migueltaco.tanzanitemod.item.ModSounds;
+import dev.migueltaco.tanzanitemod.recipe.ModRecipes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +36,8 @@ public class TanzaniteMod
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModEffects.MOB_EFFECTS.register(modEventBus);
+        ModSounds.SOUND_EVENTS.register(modEventBus);
+        ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

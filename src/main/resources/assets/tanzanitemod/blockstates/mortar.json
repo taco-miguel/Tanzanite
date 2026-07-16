@@ -1,0 +1,45 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "tanzanitemod:block/mortar"
+      }
+    },
+    {
+      "when": {
+        "has_crystal": "true",
+        "crush_progress": "0"
+      },
+      "apply": {
+        "model": "tanzanitemod:block/mortar0"
+      }
+    },
+    {
+      "when": {
+        "has_crystal": "true",
+        "crush_progress": "1"
+      },
+      "apply": {
+        "model": "tanzanitemod:block/mortar1"
+      }
+    },
+    {
+      "when": {
+        "has_crystal": "true",
+        "crush_progress": "2"
+      },
+      "apply": {
+        "model": "tanzanitemod:block/mortar2"
+      }
+    },
+    {
+      "when": {
+        "has_crystal": "true",
+        "crush_progress": "3"
+      },
+      "apply": {
+        "model": "tanzanitemod:block/mortar3"
+      }
+    }
+  ]
+}

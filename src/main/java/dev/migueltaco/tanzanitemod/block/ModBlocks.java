@@ -1,6 +1,7 @@
 package dev.migueltaco.tanzanitemod.block;
 
 import dev.migueltaco.tanzanitemod.TanzaniteMod;
+import dev.migueltaco.tanzanitemod.block.custom.CrushingMortar;
 import dev.migueltaco.tanzanitemod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -31,7 +32,8 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(3,6)));
     public static final RegistryObject<Block> TANZANITE_ORE = registerBlock("tanzanite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS).requiresCorrectToolForDrops().sound(SoundType.STONE), UniformInt.of(3,6)));
-
+    public static final RegistryObject<Block> MORTAR = registerBlock("mortar",
+            () -> new CrushingMortar(BlockBehaviour.Properties.copy(Blocks.ACACIA_WOOD).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
